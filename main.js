@@ -59,10 +59,15 @@ function last_submissions() {
 }
 
 async function roadmap() {
-    const apiUrl = `https://lc-companion-backend-api.vercel.app/roadmap/${JSON.stringify(obj)}`;
+    const apiUrl = `https://lc-companion-backend-api.vercel.app/roadmap/${encodeURIComponent(JSON.stringify(obj))}`;
     const response = await fetch(apiUrl);
     const html = await response.text();
-    const newTab = window.open();
-    newTab.document.write(html);
-    newTab.document.close();
+
+    document.getElementById("roadmap-html").innerHTML = html;
+    document.getElementById("roadmap-overlay").classList.remove("hidden");
+}
+
+function closeRoadmap() {
+    document.getElementById("roadmap-overlay").classList.add("hidden");
+    document.getElementById("roadmap-html").innerHTML = "";
 }
