@@ -1,0 +1,202 @@
+/* Base styles */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #fff;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2d2d2d;
+  margin-bottom: 1rem;
+}
+
+.input-group {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+input[type="text"] {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: #fafafa;
+  transition: border-color 0.3s ease;
+  width: 250px;
+}
+
+input[type="text"]:focus {
+  border-color: #ffa116;
+  outline: none;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #ffa116;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e5940f;
+}
+
+/* Main layout */
+#ratings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Card styles */
+.card {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 1.5rem;
+  width: 280px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  max-height: 300px;
+  overflow: hidden;
+}
+
+.card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.card p.total,
+.card p.rating {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #ffa116;
+  margin: 0.5rem 0;
+}
+
+.card ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+.card li {
+  font-size: 1rem;
+  margin: 0.3rem 0;
+}
+
+.easy {
+  color: #2ecc71;
+  font-weight: bold;
+}
+
+.medium {
+  color: #f39c12;
+  font-weight: bold;
+}
+
+.hard {
+  color: #e74c3c;
+  font-weight: bold;
+}
+
+/* Scrollable sections */
+.scrollable {
+  overflow-y: auto;
+  max-height: 300px;
+}
+
+/* Topics styling */
+#topics {
+  width: 100%;
+  max-width: 600px;
+}
+
+.topic-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: flex-start;
+  padding: 0.5rem;
+}
+
+.topic-tags span {
+  background-color: #fafafa;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  color: #333;
+  white-space: nowrap;
+}
+
+/* Contest history */
+#contest-history {
+  width: 100%;
+  max-width: 600px;
+}
+
+.contest-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+}
+
+.contest-list div {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0.8rem;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+/* Last 20 submissions */
+#last-20-submissions {
+  width: 100%;
+  max-width: 600px;
+  margin-top: 2rem;
+}
+
+.submission-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.submission-list div {
+  padding: 0.4rem 0.8rem;
+  background-color: #fafafa;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}

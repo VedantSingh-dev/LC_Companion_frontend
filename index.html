@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LC Companion</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="main.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1>LC Companion</h1>
+    <div class="input-group">
+      <input type="text" placeholder="Enter your LeetCode ID" />
+      <button onclick="stats()">Get Stats</button>
+      <button onclick="roadmap()">Get Roadmap</button>
+    </div>
+  </header>
+
+  <main id="ratings">
+    <section class="card" id="quesCnt">
+      <h2>Questions Solved</h2>
+      <p class="total">-/-</p>
+      <ul>
+        <li><span class="easy">-/-</span> Easy</li>
+        <li><span class="medium">-/-</span> Medium</li>
+        <li><span class="hard">-/-</span> Hard</li>
+      </ul>
+    </section>
+
+    <section class="card" id="contest">
+      <h2>Contest Rating</h2>
+      <p class="rating">-/-</p>
+    </section>
+
+    <section class="card scrollable" id="topics">
+      <h2>Topics Covered</h2>
+      <div class="topic-tags">
+
+
+      </div>
+    </section>
+
+    <section class="card scrollable" id="contest-history">
+      <h2>Contest History</h2>
+      <div class="contest-list">
+
+
+      </div>
+    </section>
+
+    <section class="card scrollable" id="last-20-submissions">
+      <h2>Last 20 Submissions</h2>
+      <div class="submission-list">
+
+
+      </div>
+    </section>
+  </main>
+</body>
+
+</html>
