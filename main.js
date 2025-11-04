@@ -59,12 +59,14 @@ function last_submissions() {
 }
 
 async function roadmap() {
+    document.querySelector('#roadmap').innerHTML='loading...'
     const apiUrl = `https://lc-companion-backend-api.vercel.app/roadmap/${encodeURIComponent(JSON.stringify(obj))}`;
     const response = await fetch(apiUrl);
     const html = await response.text();
 
     document.getElementById("roadmap-html").innerHTML = html;
     document.getElementById("roadmap-overlay").classList.remove("hidden");
+    document.querySelector('#roadmap').innerHTML='Get Roadmap'
 }
 
 function closeRoadmap() {
